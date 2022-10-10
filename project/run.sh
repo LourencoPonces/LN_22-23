@@ -103,16 +103,23 @@ fstcompose compiled/meta123456.fst compiled/step7.fst > compiled/meta1234567.fst
 fstcompose compiled/meta1234567.fst compiled/step8.fst > compiled/meta12345678.fst
 fstcompose compiled/meta12345678.fst compiled/step9.fst > compiled/metaphoneLN.fst
 
-
+fstinverted compiled/metaphoneLN.fst > compiled/invertMetaphoneLN.fst 
 rm compiled/meta1*
 
 echo "---------------------------------------- Testing MetaphoneLN ----------------------------------------"
 
 for w in compiled/t-*; do
     echo $w
-    fstcompose $w compiled/metaphoneLN.fst | fstshortestpath | fstproject --project_type=output |
-    fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=./syms.txt
+    fstcompose $w compiled/metaphoneLN.fst out/$(basename $w ".fst").fst | fstshortestpath out/$(basename $w ".fst").fst | fstproject --project_type=output |
+    fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=./syms.txt #> out/$(basename $w ".fst").txt
     printf "\n"
 done
 
-fstdraw --portrait --isymbols=syms.txt --osymbols=syms.txt compiled/metaphoneLN.fst | dot -Tpdf > images/metaphoneLN.pdf
+#for w in out/*.txt; do
+#    fstcompile --isymbols=syms.txt --osymbols=syms.txt $w | fstarcsort > out/$(basename $w ".txt").fst
+#done
+#for w in out/*.fst; do
+#   fstdraw --portrait --isymbols=syms.txt --osymbols=syms.txt $w | dot -Tpdf > out/$(basename $w '.fst').pdf
+#done
+
+#fstdraw --portrait --isymbols=syms.txt --osymbols=syms.txt compiled/metaphoneLN.fst | dot -Tpdf > images/metaphoneLN.pdf
