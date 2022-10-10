@@ -1,0 +1,9 @@
+0  1  [A-Z0] = 0.0
+1  1  A eps
+1  1  E eps
+1  1  I eps
+1  1  O eps
+1  1  U eps
+1  1  consonant = 0.0
+1  1  0 0
+1
