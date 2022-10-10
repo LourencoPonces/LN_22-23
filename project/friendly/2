@@ -1,0 +1,14 @@
+0  1  K eps
+0  1  G eps
+0  1  P eps
+0  2  A eps
+0  3  W eps
+1  4  N N
+2  4  E E
+3  4  R R
+0  4  eps eps 0.5
+4  4  [A-Z0] = 1
+4  6  eps eps 0.5
+4  5  M M
+5  6  B eps
+6
