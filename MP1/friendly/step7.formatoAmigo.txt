@@ -1,0 +1,32 @@
+0  1  W W
+1  2  H eps
+0  2  [A-S] = 0.0
+0  2  [UV] = 0.0
+0  2  [X-Z0] = 0.0
+0  2  T T 7.0
+0  2  W W 7.0
+0  3  T X
+3  4  I I
+4  2  A A
+4  2  O O
+0  5  T eps
+5  2  H 0
+0  6  T eps
+6  7  C C
+7  2  H H
+0  2  V F
+2  3  T X
+3  4  I I
+4  2  A A
+4  2  O O
+2  5  T eps
+5  2  H 0
+2  6  T eps
+6  7  C C
+7  2  H H
+2  2  V F
+2  2  [A-S] = 0.0
+2  2  U U 0.0
+2  2  [W-Z0] = 0.0
+2  2  T T 7.0
+2
